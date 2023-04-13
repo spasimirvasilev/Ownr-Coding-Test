@@ -14,8 +14,13 @@
 
 .arrow {
   width: 64px;
-  color: white;
+  color: rgba(255, 255, 255, 1);
   cursor: pointer;
+  transition: color 0.1s ease-in-out;
+}
+
+.arrow:hover {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .no-photos {
