@@ -39,26 +39,30 @@ function shuffleArray(array) {
 app.use(express.static(path.join(__dirname, "../client/build")));
 
 app.get("/api/animals", (req, res) => {
-  const { animal } = req.query;
+  const animals = req.query.animals.split(",");
   setTimeout(() => {
-    if (!animal) {
-      const combinedArray = sharksList.concat(catsList);
-      res.send({
-        data: shuffleArray(combinedArray),
-      });
-    } else if (animal === "cats") {
-      res.send({
-        data: catsList,
-      });
-    } else if (animal === "sharks") {
-      res.send({
-        data: sharksList,
-      });
-    } else {
+    let animalsArray = [];
+
+    if (animals.length === 0) {
       res.status(400).json({
         error: "Invalid option",
       });
     }
+
+    if (animals.includes("cats")) {
+      animalsArray = animalsArray.concat(catsList);
+    }
+    if (animals.includes("sharks")) {
+      animalsArray = animalsArray.concat(sharksList);
+    }
+
+    if (animals.length > 1) {
+      combinedArray = shuffleArray(animalsArray);
+    }
+
+    res.send({
+      data: animalsArray,
+    });
   }, 500);
 });
 
