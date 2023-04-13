@@ -1,0 +1,19 @@
+.selectable-button {
+  width: 70px;
+  padding: 12px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.active {
+  background-color: purple;
+  color: white;
+}
+
+.selectable-button:first-child {
+  margin-right: 12px;
+}
