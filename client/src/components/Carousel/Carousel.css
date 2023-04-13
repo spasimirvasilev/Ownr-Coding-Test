@@ -1,0 +1,38 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px 16px 0 16px;
+  height: 40vh;
+}
+
+.carousel-image {
+  width: calc(100% - 128px);
+  height: 100%;
+  object-fit: contain;
+}
+
+.arrow {
+  width: 64px;
+  color: white;
+  cursor: pointer;
+}
+
+.no-photos {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .carousel-container {
+    margin: 32px;
+    height: 40vh;
+  }
+
+  .carousel-image {
+    margin: 0 48px;
+  }
+
+  .arrow {
+    width: 64px;
+  }
+}

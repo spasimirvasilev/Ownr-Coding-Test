@@ -1,0 +1,29 @@
+{
+  "name": "coding-test-master",
+  "version": "1.0.0",
+  "description": "Congratulations, you have been asked to complete our Full Stack candidate proficiency test!",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run start",
+    "client": "cd client && npm run start",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spasimirvasilev/Ownr-Coding-Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spasimirvasilev/Ownr-Coding-Test/issues"
+  },
+  "homepage": "https://github.com/spasimirvasilev/Ownr-Coding-Test#readme",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  },
+  "dependencies": {
+    "react-spinners": "^0.13.8"
+  }
+}
